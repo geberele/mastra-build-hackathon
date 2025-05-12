@@ -8,6 +8,13 @@ This repository contains my personal project for the MASTRA.BUILD Virtual Hackat
 ## Development Status
 🚧 Work in Progress 🚧
 
+## Sponsors
+We're grateful to our amazing sponsors who are making this hackathon possible:
+
+- [Smithery](https://smithery.ai/) - Providing the infrastructure for building powerful AI agents
+- [MCP.run](https://www.mcp.run/) - Enabling Model Context Protocol for enhanced AI capabilities
+- [MongoDB](https://www.mongodb.com/) - Supporting the hackathon with their powerful database solutions
+
 ---
 
 ## Event Information
