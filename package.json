@@ -17,6 +17,7 @@
     "@mastra/core": "^0.9.4-alpha.2",
     "@mastra/libsql": "^0.0.4-alpha.2",
     "@mastra/memory": "^0.3.4-alpha.2",
+    "yahoo-finance2": "^2.13.3",
     "zod": "^3.24.4"
   },
   "devDependencies": {
