@@ -1,6 +1,6 @@
 import { Workflow } from '@mastra/core/workflows';
-import { stockAgent } from '../agents/stock';
-import { yahooQuoteTool, yahooSummaryTool, yahooHistoricalTool } from '../tools/yahoo';
+import { stockAgent } from '../agents/yahooFinance';
+import { yahooQuoteTool, yahooSummaryTool, yahooHistoricalTool } from '../tools/yahooFinance';
 
 export const stockAnalysisWorkflow = new Workflow({
   name: 'Stock Analysis Workflow',

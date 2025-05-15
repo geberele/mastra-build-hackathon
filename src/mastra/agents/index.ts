@@ -1,4 +1,5 @@
 import { weatherAgent } from './weather';
-import { stockAgent } from './stock';
+import { yahooFinanceAgent } from './yahooFinance';
+import { twelveDataAgent } from './twelveData';
 
-export { weatherAgent, stockAgent };
+export { weatherAgent, yahooFinanceAgent, twelveDataAgent };

@@ -2,7 +2,7 @@ import { Agent } from '@mastra/core/agent';
 import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
 import { twelveDataGetQuote, twelveDataGetIndicator, twelveDataGetTimeSeries, twelveDataGetPrice } from '../tools/twelveData/twelveData';
-import { LLM_OPENAI } from '../config';
+import { LLM_GPT_4O_MINI } from '../config';
 
 export const twelveDataAgent = new Agent({
   name: 'TwelveData Agent',
@@ -23,7 +23,7 @@ export const twelveDataAgent = new Agent({
     - twelveDataGetTimeSeries: For OHLCV candles
     - twelveDataGetIndicator: For technical indicators (SMA, RSI, EMA)
   `,
-  model: LLM_OPENAI,
+  model: LLM_GPT_4O_MINI,
   tools: {
     twelveDataGetQuote,
     twelveDataGetPrice,
@@ -42,4 +42,4 @@ export const twelveDataAgent = new Agent({
       },
     },
   }),
-}); 
+});

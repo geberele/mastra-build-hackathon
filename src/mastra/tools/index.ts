@@ -1,7 +1,7 @@
 import { weatherTool } from './weather';
 import { companyTool } from './alphavantage/company';
 import { earningsTool } from './alphavantage/earnings';
-import { yahooQuoteTool, yahooSummaryTool, yahooHistoricalTool } from './yahoo';
+import { yahooQuoteTool, yahooSummaryTool, yahooHistoricalTool } from './yahooFinance';
 import { twelveDataGetQuote, twelveDataGetIndicator, twelveDataGetTimeSeries, twelveDataGetPrice } from './twelveData/twelveData';
 
 export {
