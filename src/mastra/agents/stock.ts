@@ -2,7 +2,7 @@ import { Agent } from '@mastra/core/agent';
 import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
 import { yahooQuoteTool, yahooSummaryTool, yahooHistoricalTool } from '../tools/yahoo';
-import { MODEL } from '../config';
+import { LLM_GPT_4O_MINI } from '../config';
 
 export const stockAgent = new Agent({
   name: 'Stock Market Agent',
@@ -23,7 +23,7 @@ export const stockAgent = new Agent({
     - yahooSummaryTool: For company overview and financial data
     - yahooHistoricalTool: For historical price data
   `,
-  model: MODEL,
+  model: LLM_GPT_4O_MINI,
   tools: {
     yahooQuoteTool,
     yahooSummaryTool,

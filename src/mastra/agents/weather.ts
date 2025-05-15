@@ -2,7 +2,7 @@ import { Agent } from '@mastra/core/agent';
 import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
 import { weatherTool } from '../tools';
-import { MODEL } from '../config';
+import { LLM_GPT_4O_MINI } from '../config';
 
 export const weatherAgent = new Agent({
   name: 'Weather Agent',
@@ -18,7 +18,7 @@ export const weatherAgent = new Agent({
 
       Use the weatherTool to fetch current weather data.
   `,
-  model: MODEL,
+  model: LLM_GPT_4O_MINI,
   tools: { weatherTool },
   memory: new Memory({
     storage: new LibSQLStore({
