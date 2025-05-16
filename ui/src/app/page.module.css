@@ -31,7 +31,7 @@
   grid-row-start: 2;
 }
 
-.main ol {
+/* .main ol {
   font-family: var(--font-geist-mono);
   padding-left: 0;
   margin: 0;
@@ -39,7 +39,7 @@
   line-height: 24px;
   letter-spacing: -0.01em;
   list-style-position: inside;
-}
+} */
 
 .main code {
   font-family: inherit;

@@ -6,12 +6,12 @@ import {
   twelveDataGetIndicator, 
   twelveDataGetTimeSeries, 
   twelveDataGetPrice, 
-  twelveDataGetEpsTrend, 
   twelveDataGetPriceTarget, 
-  twelveDataGetEarningsEstimate,
-  twelveDataGetRevenueEstimate,
-  twelveDataGetRecommendations,
-  twelveDataGetAnalystRatings,
+  // twelveDataGetEpsTrend, 
+  // twelveDataGetEarningsEstimate,
+  // twelveDataGetRevenueEstimate,
+  // twelveDataGetRecommendations,
+  // twelveDataGetAnalystRatings,
 } from '../tools/twelveData/twelveData';
 import { LLM_GPT_4O_MINI } from '../config';
 
@@ -40,12 +40,12 @@ export const twelveDataAgent = new Agent({
     twelveDataGetPrice,
     twelveDataGetTimeSeries,
     twelveDataGetIndicator,
-    twelveDataGetEarningsEstimate,
-    twelveDataGetRevenueEstimate,
-    twelveDataGetEpsTrend,
-    twelveDataGetRecommendations,
     twelveDataGetPriceTarget,
-    twelveDataGetAnalystRatings,
+    // twelveDataGetEarningsEstimate,
+    // twelveDataGetRevenueEstimate,
+    // twelveDataGetEpsTrend,
+    // twelveDataGetRecommendations,
+    // twelveDataGetAnalystRatings,
   },
   memory: new Memory({
     storage: new LibSQLStore({

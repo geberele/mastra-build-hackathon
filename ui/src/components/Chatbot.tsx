@@ -14,6 +14,7 @@ import {
 } from '@chakra-ui/react';
 import { Avatar } from '@chakra-ui/avatar';
 import Markdown from 'react-markdown'
+import { Quote } from './Quote';
 
 const Chatbot = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
@@ -52,6 +53,18 @@ const Chatbot = () => {
                 />
               )}
               <Box>
+              {msg.toolInvocations &&
+                msg.toolInvocations.map((toolInvocation) => {
+                  if (
+                    toolInvocation.toolName === 'getQuote' &&
+                    toolInvocation.state === 'result' &&
+                    'result' in toolInvocation
+                  ) {
+                    const data = toolInvocation.result;
+                    return <Quote key={toolInvocation.toolCallId} data={data} />;
+                  }
+                  return null;
+                })}
                 <Box
                   bg={msg.role === "user" ? "purple.100" : "green.100"}
                   color="black"
