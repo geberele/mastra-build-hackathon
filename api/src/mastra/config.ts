@@ -9,4 +9,4 @@ const bedrock = createAmazonBedrock({
 
 export const LLM_GPT_4O = openai('gpt-4o'); 
 export const LLM_GPT_4O_MINI = openai('gpt-4o-mini'); 
-export const LLM_BEDROCK = bedrock('nvidia-nemotron-4-15b-nim');
+export const LLM_BEDROCK = bedrock('anthropic.claude-3-7-sonnet-20250219-v1:0');
