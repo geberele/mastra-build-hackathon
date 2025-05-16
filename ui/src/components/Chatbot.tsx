@@ -11,6 +11,7 @@ import {
   VStack,
   HStack,
   Spacer,
+  chakra,
 } from '@chakra-ui/react';
 import { Avatar } from '@chakra-ui/avatar';
 
@@ -34,28 +35,20 @@ const Chatbot = () => {
       className="chatbot"
     >
       <Box flex="1" p={4} overflowY="auto">
-        <VStack spacing={4} align="stretch">
+        <VStack align="stretch">
           {messages.map((msg: UIMessage) => (
             <Flex
               key={msg.id}
               align="flex-end"
-              justify={msg.role === "user" ? "flex-start" : "flex-end"}
+              justify={msg.role === "user" ? "flex-end" : "flex-start"}
             >
-              {msg.role === "user" && (
-                <Avatar
-                  w="20px"
-                  h="20px"
-                  name="User" 
-                  src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png" 
-                  mr={2}
-                />
-              )}
               {msg.role === "assistant" && (
                 <Avatar
                   w="20px"
                   h="20px"
                   name="Assistant"
-                  src="https://cdn2.iconfinder.com/data/icons/boxicons-solid-vol-1/24/bxs-bot-128.png"  
+                  src="https://cdn2.iconfinder.com/data/icons/boxicons-solid-vol-1/24/bxs-bot-128.png"
+                  mr={4}
                 />
               )}
               <Box>
@@ -65,40 +58,47 @@ const Chatbot = () => {
                   px={4}
                   py={2}
                   borderRadius="lg"
-                  borderBottomLeftRadius={msg.role === "user" ? "0" : "lg"}
-                  borderBottomRightRadius={msg.role === "user" ? "lg" : "0"}
-                  maxW="250px"
+                  borderBottomLeftRadius={msg.role === "user" ? "lg" : "0"}
+                  borderBottomRightRadius={msg.role === "user" ? "0" : "lg"}
+                  maxW="500px"
                   whiteSpace="pre-line"
                 >
                   {msg.content}
                 </Box>
-                <HStack spacing={2} mt={1}>
+                <HStack gap={2} justifyContent={msg.role === "user" ? "flex-end" : "flex-start"}>
                   <Text fontSize="xs" color="gray.500">
                     {msg.createdAt
                       ? new Date(msg.createdAt).toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
                       : ""}
                   </Text>
-                  <Text fontSize="xs" color="green.500">
-                    {msg.delivered && "Delivered"}
-                  </Text>
                 </HStack>
               </Box>
-              {msg.role === "assistant" && <Spacer />}
+              {msg.role === "user" && (
+                <Avatar
+                  w="20px"
+                  h="20px"
+                  name="User"
+                  src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-person-128.png"
+                  ml={4}
+                />
+              )}
             </Flex>
           ))}
         </VStack>
       </Box>
       <Box p={4} borderTop="1px solid" borderColor="gray.200" bg="white">
-        <Flex>
-          <Input
-            placeholder="Please type your reply here"
-            value={input}
-            onChange={handleInputChange}
-            mr={2}
-            bg="gray.100"
-          />
-          <Button colorScheme="green" onClick={handleSubmit}>Send</Button>
-        </Flex>
+        <chakra.form onSubmit={handleSubmit}>
+          <Flex>
+            <Input
+              placeholder="Please type your reply here"
+              value={input}
+              onChange={handleInputChange}
+              mr={2}
+              bg="gray.100"
+            />
+            <Button colorScheme="green" type="submit">Send</Button>
+          </Flex>
+        </chakra.form>
       </Box>
     </Flex>
   );
