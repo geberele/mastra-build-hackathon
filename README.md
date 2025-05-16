@@ -15,7 +15,7 @@ Key Features:
 ## Demo
 Demo of the chatbot in action:
 
-[Watch demo video](media/video.mov)
+![App Demo](media/demo.gif)
 
 ## Sponsors
 - [Smithery](https://smithery.ai/) - Providing the infrastructure for building powerful AI agents
