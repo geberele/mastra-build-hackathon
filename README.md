@@ -15,7 +15,9 @@ Key Features:
 ## Demo
 Check out our demo video to see the chatbot in action:
 
-https://github.com/gabrielemanna/mastra-build-hackathon/assets/123456789/video.mov
+<video src="https://github.com/gabrielemanna/mastra-build-hackathon/assets/123456789/video.mov" width="100%" controls>
+  Your browser does not support the video tag.
+</video>
 
 ## Sponsors
 - [Smithery](https://smithery.ai/) - Providing the infrastructure for building powerful AI agents
