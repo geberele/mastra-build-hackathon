@@ -15,10 +15,12 @@ import {
 import { Avatar } from '@chakra-ui/avatar';
 import Markdown from 'react-markdown'
 import { Quote } from './Quote';
+import { Price } from './Price';
 
 const Chatbot = () => {
+  const agentId = 'stockAgent';
   const { messages, input, handleInputChange, handleSubmit } = useChat({
-    api: 'http://localhost:4111/api/agents/twelveDataAgent/stream',
+    api: `http://localhost:4111/api/agents/${agentId}/stream`,
   });
 
   console.log(messages);
@@ -56,12 +58,19 @@ const Chatbot = () => {
               {msg.toolInvocations &&
                 msg.toolInvocations.map((toolInvocation) => {
                   if (
-                    toolInvocation.toolName === 'getQuote' &&
+                    toolInvocation.toolName === 'twelveDataGetQuote' &&
                     toolInvocation.state === 'result' &&
                     'result' in toolInvocation
                   ) {
                     const data = toolInvocation.result;
                     return <Quote key={toolInvocation.toolCallId} data={data} />;
+                  } else if (
+                    toolInvocation.toolName === 'twelveDataGetPrice' &&
+                    toolInvocation.state === 'result' &&
+                    'result' in toolInvocation
+                  ) {
+                    const data = toolInvocation.result;
+                    return <Price key={toolInvocation.toolCallId} data={data} />;
                   }
                   return null;
                 })}

@@ -2,16 +2,10 @@ import { Agent } from '@mastra/core/agent';
 import { Memory } from '@mastra/memory';
 import { LibSQLStore } from '@mastra/libsql';
 import { 
-  twelveDataGetQuote, 
-  twelveDataGetIndicator, 
+  twelveDataGetQuote,
   twelveDataGetTimeSeries, 
   twelveDataGetPrice, 
-  twelveDataGetPriceTarget, 
-  // twelveDataGetEpsTrend, 
-  // twelveDataGetEarningsEstimate,
-  // twelveDataGetRevenueEstimate,
-  // twelveDataGetRecommendations,
-  // twelveDataGetAnalystRatings,
+  twelveDataGetPriceTarget,
 } from '../tools/twelveData/twelveData';
 import { LLM_GPT_4O_MINI } from '../config';
 
@@ -39,13 +33,7 @@ export const twelveDataAgent = new Agent({
     twelveDataGetQuote,
     twelveDataGetPrice,
     twelveDataGetTimeSeries,
-    twelveDataGetIndicator,
     twelveDataGetPriceTarget,
-    // twelveDataGetEarningsEstimate,
-    // twelveDataGetRevenueEstimate,
-    // twelveDataGetEpsTrend,
-    // twelveDataGetRecommendations,
-    // twelveDataGetAnalystRatings,
   },
   memory: new Memory({
     storage: new LibSQLStore({
