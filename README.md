@@ -15,7 +15,7 @@ Key Features:
 ## Demo
 Demo of the chatbot in action:
 
-![App Demo](media/demo.gif)
+![App Demo](media/video.gif)
 
 ## Technical Stack
 
