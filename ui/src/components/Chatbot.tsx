@@ -10,10 +10,10 @@ import {
   Button,
   VStack,
   HStack,
-  Spacer,
   chakra,
 } from '@chakra-ui/react';
 import { Avatar } from '@chakra-ui/avatar';
+import Markdown from 'react-markdown'
 
 const Chatbot = () => {
   const { messages, input, handleInputChange, handleSubmit } = useChat({
@@ -25,7 +25,7 @@ const Chatbot = () => {
   return (
     <Flex
       direction="column"
-      h="100vh"
+      h="95vh"
       w="800px"
       mx="auto"
       bg="gray.50"
@@ -63,7 +63,7 @@ const Chatbot = () => {
                   maxW="500px"
                   whiteSpace="pre-line"
                 >
-                  {msg.content}
+                  <Markdown>{msg.content}</Markdown>
                 </Box>
                 <HStack gap={2} justifyContent={msg.role === "user" ? "flex-end" : "flex-start"}>
                   <Text fontSize="xs" color="gray.500">
