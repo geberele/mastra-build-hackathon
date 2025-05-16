@@ -13,11 +13,9 @@ Key Features:
 - Market news and updates integration
 
 ## Demo
-Check out our demo video to see the chatbot in action:
+Demo of the chatbot in action:
 
-<video src="https://github.com/gabrielemanna/mastra-build-hackathon/assets/123456789/video.mov" width="100%" controls>
-  Your browser does not support the video tag.
-</video>
+[Watch demo video](media/video.mov)
 
 ## Sponsors
 - [Smithery](https://smithery.ai/) - Providing the infrastructure for building powerful AI agents
