@@ -23,7 +23,7 @@ Demo of the chatbot in action:
 - Next.JS for the user interface
 
 ### Backend
-- Mastra.AI
+- [Mastra.AI](https://mastra.ai)
 - [Twelve Data APIs](https://twelvedata.com/docs#analysis)
 - Smithery MCP for agent capabilities
 
