@@ -24,12 +24,12 @@ Demo of the chatbot in action:
 
 ### Backend
 - Mastra.AI
-- Alpha Vantage APIs
+- [Twelve Data APIs](https://twelvedata.com/docs#analysis)
 - Smithery MCP for agent capabilities
 
 ### Stock Agent Tools
 - Yahoo Finance API for real-time stock data
-- Alpha Vantage for historical data and technical analysis
+- [Twelve Data](https://twelvedata.com) for historical data and technical analysis
 - News API for market updates and financial news
 - Custom sentiment analysis for market trends
 
