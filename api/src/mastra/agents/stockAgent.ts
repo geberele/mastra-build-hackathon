@@ -16,14 +16,9 @@ const mcp = new MCPClient({
   servers: {
     duckduckgo: {
       url: new URL("https://server.smithery.ai/@nickclyde/duckduckgo-mcp-server/mcp?api_key=fa62f96f-2f78-4110-88d6-e49c1f35e9bd"),
-      retry: {
-        attempts: 3,
-        delay: 1000,
-      },
     },
   },
   timeout: 30000, // Global 30s timeout
-  keepAlive: true, // Keep the connection alive
 });
 
 // Initialize the agent with async tools
