@@ -17,6 +17,25 @@ Demo of the chatbot in action:
 
 ![App Demo](media/demo.gif)
 
+## Technical Stack
+
+### Frontend
+- React.js for the user interface
+- Material-UI for modern, responsive design
+- WebSocket for real-time communication
+
+### Backend
+- Node.js with Express.js
+- MongoDB for data persistence
+- Smithery AI infrastructure for agent capabilities
+- MCP.run for enhanced context management
+
+### Stock Agent Tools
+- Yahoo Finance API for real-time stock data
+- Alpha Vantage for historical data and technical analysis
+- News API for market updates and financial news
+- Custom sentiment analysis for market trends
+
 ## Sponsors
 - [Smithery](https://smithery.ai/) - Providing the infrastructure for building powerful AI agents
 - [MCP.run](https://www.mcp.run/) - Enabling Model Context Protocol for enhanced AI capabilities
