@@ -12,6 +12,11 @@ Key Features:
 - Historical data analysis and trend visualization
 - Market news and updates integration
 
+## Demo
+Check out our demo video to see the chatbot in action:
+
+https://github.com/gabrielemanna/mastra-build-hackathon/assets/123456789/video.mov
+
 ## Sponsors
 - [Smithery](https://smithery.ai/) - Providing the infrastructure for building powerful AI agents
 - [MCP.run](https://www.mcp.run/) - Enabling Model Context Protocol for enhanced AI capabilities
