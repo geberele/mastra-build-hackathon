@@ -20,15 +20,12 @@ Demo of the chatbot in action:
 ## Technical Stack
 
 ### Frontend
-- React.js for the user interface
-- Material-UI for modern, responsive design
-- WebSocket for real-time communication
+- Next.JS for the user interface
 
 ### Backend
-- Node.js with Express.js
-- MongoDB for data persistence
-- Smithery AI infrastructure for agent capabilities
-- MCP.run for enhanced context management
+- Mastra.AI
+- Alpha Vantage APIs
+- Smithery MCP for agent capabilities
 
 ### Stock Agent Tools
 - Yahoo Finance API for real-time stock data
